@@ -2,10 +2,9 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration>
 
-    <appender name="fileAppender" class="org.apache.log4j.FileAppender">
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
         <param name="append" value="false"/>
         <param name="bufferedIO" value="false"/>
-        <param name="file" value="security_practise.log"/>
 
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n"/>
@@ -14,7 +13,7 @@
 
     <root>
         <level value="INFO"/>
-        <appender-ref ref="fileAppender"/>
+        <appender-ref ref="ConsoleAppender"/>
     </root>
 
 </log4j:configuration>
