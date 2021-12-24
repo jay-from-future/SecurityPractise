@@ -34,6 +34,8 @@ public class LoginServlet extends HttpServlet {
         try {
             Statement statement = connection.getConnection().createStatement();
             String query = FIND_USER.replace("usernameParam", "'" + username + "'");
+            // checking rule
+            System.out.println("bla bla bla");
             LOG.info("Query : " + query);
             ResultSet resultSet = statement.executeQuery(query);
             if (resultSet.next()) {
